@@ -17,7 +17,7 @@ import java.util.List;
 public class UserController {
 
     private final UserService userService;
-    private final PasswordEncoder passwordEncoder; // 🔹 Добавили PasswordEncoder
+    private final PasswordEncoder passwordEncoder; //
 
     public UserController(UserService userService, PasswordEncoder passwordEncoder) {
         this.userService = userService;
@@ -29,7 +29,7 @@ public class UserController {
     public ResponseEntity<UserResponse> createUser(@Valid @RequestBody UserRequest userRequest) {
         User user = mapToEntity(userRequest);
 
-        // 🔹 Шифруем пароль
+
         user.setPassword(passwordEncoder.encode(user.getPassword()));
 
         User savedUser = userService.saveUser(user);

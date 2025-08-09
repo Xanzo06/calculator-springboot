@@ -14,7 +14,7 @@ public class User {
     private String lastName;
     private String email;
 
-    private Integer age; // <-- обязательно Integer (или int), и есть сеттер/геттер
+    private Integer age;
 
     private String password;
 

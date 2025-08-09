@@ -3,14 +3,14 @@ package com.example.calculator.service;
 import com.example.calculator.model.User;
 import com.example.calculator.exception.UserNotFoundException;
 import com.example.calculator.repository.UserRepository;
-import org.springframework.security.crypto.password.PasswordEncoder; // <-- добавили импорт
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
 public class UserService {
     private final UserRepository userRepository;
-    private final PasswordEncoder passwordEncoder; // <-- новое поле
+    private final PasswordEncoder passwordEncoder;
 
 
     public UserService(UserRepository userRepository, PasswordEncoder passwordEncoder) {
