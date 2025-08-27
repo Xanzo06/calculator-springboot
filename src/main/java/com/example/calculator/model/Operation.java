@@ -18,6 +18,10 @@ public class Operation {
         return id;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public double getOperand1() {
         return operand1;
     }
